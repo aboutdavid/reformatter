@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Primary Meta Tags -->
+    <title>reformatter</title>
+    <meta name="title" content="reformatter" />
+    <meta
+      name="description"
+      content="ReFormat webpages to save them without JavaScript/print them nicely."
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://reformatter.glitch.me/" />
+    <meta property="og:title" content="reformatter" />
+    <meta
+      property="og:description"
+      content="ReFormat webpages to save them without JavaScript/print them nicely."
+    />
+    <meta property="og:image" content="" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://reformatter.glitch.me/" />
+    <meta property="twitter:title" content="reformatter" />
+    <meta
+      property="twitter:description"
+      content="ReFormat webpages to save them without JavaScript/print them nicely."
+    />
+    <meta property="twitter:image" content="" />
+
+    <link rel="stylesheet" href="/style.css" />
+    <style>
+      .form {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 75%;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="form">
+      <div class="grid gs4 gsy fd-column">
+        <div class="grid--cell">
+          <label class="d-block s-label" for="example-item1">
+            ReFormatter
+            <p class="s-description mt2">
+              A PrintFriendly altentive. Drag this into your bookmarks tab to
+              automatically reformat webpages:
+              <a
+                href="javascript:(function(){window.open(`https://reformatter.glitch.me/?url=${encodeURIComponent(window.location.href)
+}`)})();"
+                >ReFormat This Webpage</a
+              >
+            </p>
+          </label>
+        </div>
+        <div class="grid ps-relative">
+          <input
+            class="s-input"
+            id="url"
+            type="text"
+            name="url"
+            required
+            placeholder="Insert a URL"
+          />
+          <button class="s-btn s-btn__filled" type="submit">Submit</button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

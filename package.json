@@ -1,0 +1,28 @@
+{
+  "name": "reformatter",
+  "version": "1.0.0",
+  "description": "ReFormat webpages to print them nicely.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "validator": "^13.5.2",
+    "sync-request": "^6.1.0",
+    "nunjucks": "^3.2.3",
+    "article-parser": "^4.2.6"
+  },
+  "engines": {
+    "node": "14.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/reformatter"
+  },
+  "license": "MIT",
+  "keywords": [
+    "webpage",
+    "print",
+    "css"
+  ]
+}

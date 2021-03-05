@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>reformatter</title>
+
+    <link rel="stylesheet" href="/markdown.css" />
+    <link rel="stylesheet" href="/page.css" />
+    <style></style>
+  </head>
+  <body>
+    <article class="markdown-body">
+      <img src="{{ image or ''}}" onerror="this.style.display = 'none'" />
+      <h1 style="border-bottom:none;">
+        {{ title or "(Untitled Article)"}}
+      </h1>
+      <small>
+        {{ domain }} {% if author %} | {{author}} {% endif %} {% if author %} |
+        {{date}} {% endif %}
+      </small>
+      <hr />
+      <br />
+
+      {{ content |safe or "No Content Provided" }}
+    </article>
+    <script>
+      document.addEventListener("DOMContentLoaded", function(event) {
+        document.querySelectorAll("img").forEach(function(img) {
+          img.onerror = function() {
+            this.style.display = "none";
+          };
+        });
+      });
+    </script>
+  </body>
+</html>
